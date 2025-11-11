@@ -32,7 +32,7 @@ jobs:
       - name: Upload artifact (only index.html)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './templates/index.html'
+          path: 'https://github.com/Gauravmangate27/Farmeasy_app'
 
       - name: Deploy to GitHub Pages
         id: deployment
