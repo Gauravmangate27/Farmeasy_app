@@ -1,21 +1,16 @@
-# Simple workflow for deploying static content to GitHub Pages
+# .github/workflows/deploy.yml
 name: Deploy index.html from templates folder to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-
-  # Allows manual run from the Actions tab
   workflow_dispatch:
 
-# Permissions for GITHUB_TOKEN
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -34,10 +29,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact (templates/index.html)
+      - name: Upload artifact (only index.html)
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only index.html from the templates folder
           path: './templates/index.html'
 
       - name: Deploy to GitHub Pages
