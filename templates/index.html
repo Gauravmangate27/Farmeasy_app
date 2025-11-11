@@ -151,8 +151,10 @@
       } catch (err) {
         alert('Error contacting backend API.');
       } finally {
-        submitButton.innerHTML = 'Predict Stage & Diseases';
-        submitButton.disabled = false;
+        setTimeout(() => {
+          submitButton.innerHTML = 'Predict Stage & Diseases';
+          submitButton.disabled = false;
+        }, 60000);
       }
     };
 
@@ -181,8 +183,10 @@
       } catch (err) {
         alert('Error contacting backend API.');
       } finally {
-        submitButton.innerHTML = 'Get Insights';
-        submitButton.disabled = false;
+        setTimeout(() => {
+          submitButton.innerHTML = 'Get Insights';
+          submitButton.disabled = false;
+        }, 60000);
       }
     };
   </script>
